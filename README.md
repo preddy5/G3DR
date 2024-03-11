@@ -19,6 +19,7 @@ save_dir - path to dir to save the training logs.
 
 ## Requirements
 Install Clip repo from https://github.com/openai/CLIP
+
 All the other required libraries should be available to download via pip.
 
 ## Training
