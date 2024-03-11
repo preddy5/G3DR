@@ -1,0 +1,42 @@
+G3DR:
+  seed: 420
+  unet_feature_dim: 64 # ignored if render is false 
+  
+  training:
+    learning_rate: 5e-5
+    batch_size: 8
+    save_and_sample_every: 500
+    dataset: Imagenet
+    train_num_steps: 300000
+    dataset_folder: /../imagenet/imagenet_256_with_depth/ 
+
+  rendering:
+    render: True
+    renderer_path: /../eg3d/eg3d/  # eg3d path
+    estimate_camera: False
+    view_transform: True
+    triplane_renderer_config:
+      rendering_kwargs:
+        ray_start: auto
+        ray_end: auto
+        box_warp: 2
+        depth_resolution: 32   # use 64 for visualizing (less flickering)
+        depth_resolution_importance: 32  # use 64 for visualizing (less flickering)
+        disparity_space_sampling: False
+        clamp_mode: softplus
+      mlp_decoder_config:
+        num_of_layers: 2
+        add_global_position_as_feature: 1
+        fourier_n: 4
+        decoder_lr_mul: 1
+        decoder_output_dim: 3
+        zero_outside_triplanes: True
+        decoder_time_feature: False
+        lod: True
+
+logging:
+  version: supp_test
+  save_dir: //../logs/G3DR/
+
+dataset_params:
+  all_classes: True
