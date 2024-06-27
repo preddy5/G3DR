@@ -50,12 +50,11 @@ The expected outputs are present in the output folder.
 ## Bibtex
 Please consider citing our paper.
 ```
-@misc{reddy2024g3dr,
-      title={G3DR: Generative 3D Reconstruction in ImageNet}, 
-      author={Pradyumna Reddy and Ismail Elezi and Jiankang Deng},
-      year={2024},
-      eprint={2403.00939},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{reddy2024g3dr,
+  title={G3DR: Generative 3D Reconstruction in ImageNet},
+  author={Reddy, Pradyumna and Elezi, Ismail and Deng, Jiankang},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9655--9665},
+  year={2024}
 }
 ```
